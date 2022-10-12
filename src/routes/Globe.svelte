@@ -300,7 +300,12 @@
 	function fillText(obj, color) {
 		context.beginPath();
 		path(obj);
-		context.strokeStyle = '#FFCC66';
+        var gradient = context.createLinearGradient(0, 0, width, 0);
+        //gradient.addColorStop("0", "yellow");
+        //gradient.addColorStop("0.5", "yellow");
+        //gradient.addColorStop("1.0", "blue");
+        //context.lineWidth = 3   ;
+        context.strokeStyle = '#FFCC66'
 		context.fillStyle = color;
 		context.stroke();
 	}
