@@ -8,12 +8,13 @@
 	// scale of the globe (not the canvas element)
 	var scaleFactor = 1;
 	// autorotation speed
-	var degPerSec = -60;
+	var degPerSec = -20;
 	// start angles
 	var angles = { x: -0, y: 40, z: 0 };
 	// colors
-	var colorWater = '#00008B';
-	var colorLand = '#056608';
+	var colorWater = '#ECE6C2';
+	var colorLand = '#D2A24C';
+	var colorText = '#FAF9F6'
 	let canvas;
 	let projection;
 	var lastTime = d3.now();
@@ -229,9 +230,8 @@
 			}
 		]
 	};
-	let something;
 	let path;
-	let obj;
+	let father;
 
 	onMount(async () => {
 		const response = await d3.json('https://unpkg.com/world-atlas@1/world/110m.json');
@@ -241,6 +241,7 @@
 		canvas = d3.select('#globe');
 
 		context = canvas.node().getContext('2d');
+		father = document.getElementById("father");
 
 		projection = d3.geoOrthographic().precision(0.1);
 		path = d3.geoPath(projection).context(context);
@@ -266,30 +267,22 @@
 	}
 
 	function scale() {
-		//width = document.documentElement.clientWidth / 2;
-		//height = document.documentElement.clientHeight / 2;
-		width = 120;
-		height = 120;
+		//width = document.documentElement.clientWidth / 4;
+		//height = document.documentElement.clientHeight / 8;
+		height = 500;
+		width = 500;
 		canvas.attr('width', width).attr('height', height);
 		projection
-			.scale((scaleFactor * Math.min(width, height)) / 2)
+			.scale((scaleFactor * Math.max(width / 2, height / 2)))
 			.translate([width / 2, height / 2]);
 		render();
-	}
-
-	function startRotation(delay) {
-		autorotate.restart(rotate, delay || 0);
-	}
-
-	function stopRotation() {
-		autorotate.stop();
 	}
 
 	function render() {
 		context.clearRect(0, 0, 200, 200);
 		fill(water, colorWater);
 		fill(land, colorLand);
-		fillText(swag, 'red');
+		fillText(swag, colorText);
 	}
 
 	function fill(obj, color) {
@@ -302,13 +295,7 @@
 	function fillText(obj, color) {
 		context.beginPath();
 		path(obj);
-		var gradient = context.createLinearGradient(0, 0, width, 0);
-		//gradient.addColorStop("0", "yellow");
-		//gradient.addColorStop("0.5", "yellow");
-		//gradient.addColorStop("1.0", "blue");
-		//context.lineWidth = 3   ;
-		context.strokeStyle = '#FFCC66';
-		context.fillStyle = color;
+		context.strokeStyle = color;
 		context.stroke();
 	}
 
@@ -324,48 +311,18 @@
 		lastTime = now;
 	}
 </script>
-<div class = "animation">
 
-
-<div id="overlay">
-	<div id="layer">
-		<canvas id="globe" />
-	</div>
-	<div id="layer2">
-		<a href="https://codepen.io/skillfulman2/pen/eYrQJJr" class="circle" style="background: transparent;"></a>
-	</div>
+<div id="fathers">
+	<canvas id="globe" />
+	<div id = "bio">Hello, my name is Ryan Remaly</div>
 </div>
-</div>
-
-<h1>Welcome</h1>
 
 <style>
 	#globe {
-		
+		float: left;
 	}
-
-	.circle {
-		border-radius: 100%;
-		width: 100%;
-        height: 100%;            
-        position: absolute;
-        top: 0;
-        left: 0;
-   
+	#bio {
+		float: right;
 	}
-
-	#layer {
-		z-index: 9;
-        margin: 0px;
-	}
-
-	#overlay {
-		width: 120px;
-        height: 120px;
-        position: relative;	
-	}
-
-	.animation {
-		padding: 100px;
-	}
+	
 </style>

@@ -1,7 +1,6 @@
 <!-- Header.svelte -->
 <header>
     <a href="/">Home</a>
-  
     <nav>
       <ul>
         <li>
@@ -21,7 +20,7 @@
   <style>
     header {
       padding: 1rem;
-      background: lightskyblue;
+      background: #FAF9F6;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
