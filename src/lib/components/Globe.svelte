@@ -12,8 +12,8 @@
 	// start angles
 	var angles = { x: -0, y: 40, z: 0 };
 	// colors
-	var colorWater = '#ECE6C2';
-	var colorLand = '#D2A24C';
+	var colorWater = '#F3DFC1';
+	var colorLand = '#E0C9A6';
 	var colorText = '#FAF9F6'
 	let canvas;
 	let projection;
@@ -267,14 +267,14 @@
 	}
 
 	function scale() {
-		//width = document.documentElement.clientWidth / 4;
-		//height = document.documentElement.clientHeight / 8;
-		height = 500;
-		width = 500;
-		canvas.attr('width', width).attr('height', height);
+		//width = document.documentElement.clientWidth / 2;
+		//height = document.documentElement.clientHeight / 6;
+		height = 50;
+		width = 50;
+		canvas.attr('width', width * 2).attr('height', height *2);
 		projection
-			.scale((scaleFactor * Math.max(width / 2, height / 2)))
-			.translate([width / 2, height / 2]);
+			.scale((scaleFactor * Math.max(width, height / 2)))
+			.translate([width, height]);
 		render();
 	}
 
@@ -311,18 +311,14 @@
 		lastTime = now;
 	}
 </script>
-
 <div id="fathers">
 	<canvas id="globe" />
-	<div id = "bio">Hello, my name is Ryan Remaly</div>
 </div>
 
 <style>
 	#globe {
 		float: left;
-	}
-	#bio {
-		float: right;
+		clip-path: circle(200px at 50% 50%);
 	}
 	
 </style>

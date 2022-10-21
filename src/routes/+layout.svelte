@@ -1,6 +1,7 @@
 <!-- +layout.svelte -->
 <script>
     import Header from '$lib/components/Header.svelte'
+    import Section from '../lib/components/Section.svelte'
     import '$lib/styles/style.scss'
     </script>
     
@@ -11,4 +12,3 @@
   <slot />
 </main>
 
-<footer>Hello, I'm the footer.</footer>
