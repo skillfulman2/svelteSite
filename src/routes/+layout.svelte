@@ -2,13 +2,17 @@
 <script>
     import Header from '$lib/components/Header.svelte'
     import '$lib/styles/style.scss'
+    import { fade } from 'svelte/transition'
+  
+  export let data
     </script>
-    
-    <Header />
-    <!-- The rest of the HTML here -->
+<!-- src/routes/+layout.svelte -->
 
-<main>
-  <slot />
-</main>
-
-<footer>Hello, I'm the footer.</footer>
+  
+  <Header />
+  
+  {#key data.currentRoute}
+    <main in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }}>
+      <slot />
+    </main>
+  {/key}

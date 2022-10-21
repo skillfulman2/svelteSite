@@ -4,6 +4,7 @@
     </script>
     
     <h1>Blog</h1>
+    
       
     <ul>
       {#each data.posts as post}
