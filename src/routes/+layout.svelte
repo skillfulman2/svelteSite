@@ -1,6 +1,7 @@
 <!-- +layout.svelte -->
 <script>
     import Header from '$lib/components/Header.svelte'
+    import Section from '../lib/components/Section.svelte'
     import '$lib/styles/style.scss'
     import { fade } from 'svelte/transition'
   
