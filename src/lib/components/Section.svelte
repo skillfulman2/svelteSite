@@ -1,9 +1,7 @@
 <!-- Section.svelte -->
 
 <div id="section">
-    <div>
-        Swagg
-    </div>
+
 
 </div>
 
