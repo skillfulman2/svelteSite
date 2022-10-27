@@ -1,6 +1,7 @@
 <!-- Header.svelte -->
 <script>
 	import Globe from './Globe.svelte';
+	import Rectangle from './Rectangle.svelte'
 </script>
 
 <header>
@@ -22,22 +23,8 @@
 		</ul>
 	</nav>
 </header>
-<div class="rectangleContainerBack">
-	<div class="rectangleContainer">
-		<div class="roundRect" style="background: #f3dfc1; --width: 33vw;" />
-		<div class="roundRect" style="background: #f3dfc1; --width: 12vw;" />
-		<div class="roundRect" style="background: #f3dfc1; --width: 21vw;" />
-		<div class="roundRect" style="background: #f3dfc1; --width: 13vw;" />
-		<div class="roundRect" style="background: #f3dfc1; --width: 7vw;" />
-	</div>
-</div>
-<div class="rectangleContainer">
-	<div class="roundRect" style="background: #faf9f6; --width: 33vw;" />
-	<div class="roundRect" style="background: #faf9f6; --width: 12vw;" />
-	<div class="roundRect" style="background: #faf9f6; --width: 21vw;" />
-	<div class="roundRect" style="background: #faf9f6; --width: 13vw;" />
-	<div class="roundRect" style="background: #faf9f6; --width: 7vw;" />
-</div>
+<Rectangle />
+
 
 <style>
 	header {

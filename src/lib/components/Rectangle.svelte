@@ -16,3 +16,42 @@
 	<div class="roundRect" style="background: #faf9f6; --width: 13vw;" />
 	<div class="roundRect" style="background: #faf9f6; --width: 7vw;" />
 </div>
+
+
+<style>
+
+.roundRect {
+		width: var(--width);
+		height: 0.6rem;
+		border-radius: 20px;
+	}
+
+	@keyframes slide-right {
+		from {
+			margin-left: 40vw;
+		}
+		50% {
+			margin-left: 20vw;
+		}
+		to {
+			margin-left: 0vh;
+		}
+	}
+	
+	.rectangleContainerBack {
+		height: 0.6rem;
+		background: #faf9f6;
+	}
+
+	.rectangleContainer {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		padding-left: 0.5vw;
+		padding-right: 0.5vw;
+		animation-name: slide-right;
+		animation-timing-function: linear;
+		-webkit-animation-timing-function: linear;
+		animation-duration: 1s;
+	}
+</style>
