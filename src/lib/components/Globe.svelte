@@ -14,7 +14,7 @@
 	// colors
 	var colorWater = '#F3DFC1';
 	var colorLand = '#E0C9A6';
-	var colorText = '#FAF9F6'
+	var colorText = '#FAF9F6';
 	let canvas;
 	let projection;
 	var lastTime = d3.now();
@@ -241,7 +241,7 @@
 		canvas = d3.select('#globe');
 
 		context = canvas.node().getContext('2d');
-		father = document.getElementById("father");
+		father = document.getElementById('father');
 
 		projection = d3.geoOrthographic().precision(0.1);
 		path = d3.geoPath(projection).context(context);
@@ -271,10 +271,8 @@
 		//height = document.documentElement.clientHeight / 6;
 		height = 50;
 		width = 50;
-		canvas.attr('width', width * 2).attr('height', height *2);
-		projection
-			.scale((scaleFactor * Math.max(width, height / 2)))
-			.translate([width, height]);
+		canvas.attr('width', width * 2).attr('height', height * 2);
+		projection.scale(scaleFactor * Math.max(width, height / 2)).translate([width, height]);
 		render();
 	}
 
@@ -311,6 +309,7 @@
 		lastTime = now;
 	}
 </script>
+
 <div id="fathers">
 	<canvas id="globe" />
 </div>
@@ -320,5 +319,4 @@
 		float: left;
 		clip-path: circle(200px at 50% 50%);
 	}
-	
 </style>

@@ -1,7 +1,7 @@
 <!-- Header.svelte -->
 <script>
 	import Globe from './Globe.svelte';
-	import Rectangle from './Rectangle.svelte'
+	import Rectangle from './Rectangle.svelte';
 </script>
 
 <header>
@@ -24,7 +24,6 @@
 	</nav>
 </header>
 <Rectangle />
-
 
 <style>
 	header {
@@ -49,8 +48,6 @@
 		gap: 2rem;
 	}
 
-	
-
 	.dot {
 		height: 100px;
 		width: 100px;
@@ -58,6 +55,4 @@
 		border-radius: 50%;
 		display: inline-block;
 	}
-
-	
 </style>
