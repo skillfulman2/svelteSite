@@ -1,11 +1,12 @@
 <!-- Section.svelte -->
 
-<div id="section" />
+<div id="section"></div>
 
 <style>
 	#section {
-		height: 30%;
-		width: 100%;
+		display: flex;
+		height: 50vh;
+		width: 100vw;
 		background: #e27c00;
 	}
 </style>
