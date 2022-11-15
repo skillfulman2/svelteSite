@@ -22,7 +22,7 @@
 	  </div>
   
 	  <div class="intro__body"> 
-		<h3></h3>
+		<h3>swag</h3>
   
 		<p>
 		  Senior Engineer at CAE
