@@ -19,6 +19,7 @@
 	let projection;
 	var lastTime = d3.now();
 	var degPerMs = degPerSec / 1000;
+	let PIXEL_RATIO;
 	/**
 	 * @type {number}
 	 */
@@ -237,11 +238,15 @@
 		const response = await d3.json('https://unpkg.com/world-atlas@1/world/110m.json');
 		console.log(response);
 		land = topojson.feature(response, response.objects.land);
+		PIXEL_RATIO = window.devicePixelRatio;
 
 		canvas = d3.select('#globe');
 
 		context = canvas.node().getContext('2d');
 		father = document.getElementById('father');
+
+		//canvas.attr('width', 50).attr('height', 50);
+		
 
 		projection = d3.geoOrthographic().precision(0.1);
 		path = d3.geoPath(projection).context(context);
@@ -249,6 +254,7 @@
 		setAngles();
 
 		window.addEventListener('resize', scale);
+		//projection.scale(scaleFactor * Math.max(width, height / 2)).translate([width, height]);
 		scale();
 
 		autorotate = d3.timer(rotate);
@@ -269,10 +275,10 @@
 	function scale() {
 		//width = document.documentElement.clientWidth / 2;
 		//height = document.documentElement.clientHeight / 6;
-		height = 50;
-		width = 50;
-		canvas.attr('width', width * 2).attr('height', height * 2);
-		projection.scale(scaleFactor * Math.max(width, height / 2)).translate([width, height]);
+		height = 50 * PIXEL_RATIO;
+		width = 50 * PIXEL_RATIO;
+		//canvas.attr('width', width * 2).attr('height', height * 2);
+		projection.scale(scaleFactor * Math.max(width * PIXEL_RATIO, height / 2 * PIXEL_RATIO)).translate([width * PIXEL_RATIO, height * PIXEL_RATIO]);
 		render();
 	}
 
