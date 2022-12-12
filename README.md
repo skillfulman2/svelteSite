@@ -1,5 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/671a25e4-673c-4d84-b9ac-cab49ee70bbe/deploy-status)](https://app.netlify.com/sites/heroic-cranachan-8f1aac/deploys)
 
+Using this repo to rebuild portfolio site with Svelte
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
