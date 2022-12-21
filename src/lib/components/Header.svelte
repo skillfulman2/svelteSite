@@ -18,6 +18,9 @@
 				<a href="/about">About</a>
 			</li>
 			<li>
+				<a href="/projects">Projects</a>
+			</li>
+			<li>
 				<a href="/contact">Contact</a>
 			</li>
 		</ul>
@@ -29,7 +32,7 @@
 	header {
 		padding: 1rem;
 		background: #faf9f6;
-		height: 100px;
+		height: 140px;
 		display: flex;
 		flex-wrap: nowrap;
 		justify-content: space-between;

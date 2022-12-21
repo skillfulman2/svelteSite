@@ -36,6 +36,7 @@
 		"just-debounce": "^1.1.0",
 		"rehype-autolink-headings": "^6.1.1",
 		"rehype-slug": "^5.0.1",
+		"npm i svelte-materialify": "^0.3.11",
 		"topojson": "^3.0.2"
 	}
 }

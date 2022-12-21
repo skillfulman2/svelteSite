@@ -19,20 +19,7 @@
 	  </div>
   
 	  <div class="intro__body"> 
-		<h3>Currently: </h3>
-  
-		<p>
-		  Senior Engineer at CAE
-		</p>
-  
-		<p>
-		  
-		</p>
-  
-		<h3>Personally:</h3>
-		<p>
-		  Soccer Coach; Greenthumb
-		</p>
+		<h1>Hello my name is <b>Ryan</b></h1>
 	  
 	  </div>
 	  <HomepageLinkList />

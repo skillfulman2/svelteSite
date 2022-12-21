@@ -6,6 +6,7 @@
 	import { TwitterIcon } from '@indaco/svelte-iconoir';
 	import { CenterBox3DIcon } from '@indaco/svelte-iconoir';
 	import RectangleBottom from './RectangleBottom.svelte';
+	import { Footer, MaterialApp } from 'svelte-materialify';
 
 	const currentYear: number = new Date().getFullYear();
 </script>
