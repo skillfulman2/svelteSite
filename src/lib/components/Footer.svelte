@@ -26,10 +26,14 @@
 			<TwitterIcon class="roundedColor" />
 		</a>
 		<a data-sveltekit-preload-data="tap" href="https://codesandbox.io/u/skillfulman2">
-			<CenterBox3DIcon class="roundedColor" />
+			<CenterBox3DIcon
+			color="#ffffff" class="roundedColor" />
 		</a>
 	</div>
 </footer>
 
 <style lang="scss">
+	:global(.roundedColor) {
+		color: #000000;
+	}
 </style>
