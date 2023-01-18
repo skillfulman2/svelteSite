@@ -26,8 +26,7 @@
 			<TwitterIcon class="roundedColor" />
 		</a>
 		<a data-sveltekit-preload-data="tap" href="https://codesandbox.io/u/skillfulman2">
-			<CenterBox3DIcon
-			color="#ffffff" class="roundedColor" />
+			<CenterBox3DIcon class="roundedColor" />
 		</a>
 	</div>
 </footer>
