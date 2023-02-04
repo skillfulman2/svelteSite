@@ -1,6 +1,7 @@
 <script>
 	import Main from '../lib/components/Main.svelte';
 	import HomepageLinkList from '$lib/components/HomepageLinkList.svelte';
+	import Egg from '../lib/components/Egg.svelte';
 </script>
 
 <svelte:head>
@@ -19,6 +20,7 @@
 <Main>
 	<div class="intro">
 		<div class="intro__headline" />
+		<Egg />
 
 		<div class="intro__body">
 			<h1>Hello my name is <b>Ryan</b></h1>
